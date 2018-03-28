@@ -21,7 +21,10 @@
 ## Known Issues
 - Horizontal & Vertical Scrolling now working in Messages modal.
 
-
 ## Testing
 - Working on Android
 - Not sure about IOS.
+
+## Installation
+- npm install
+- react-native run-android
