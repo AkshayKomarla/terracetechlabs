@@ -19,7 +19,7 @@
 - Messages modal
 
 ## Known Issues
-- Horizontal & Vertical Scrolling now working in Messages modal.
+- Horizontal & Vertical Scrolling now working in Messages modal. (conflict with PanResponder)
 
 ## Testing
 - Working on Android
