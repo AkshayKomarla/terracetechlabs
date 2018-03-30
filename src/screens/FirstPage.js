@@ -55,7 +55,7 @@ const FlatListBox = styled.View`
 align-self:center;
 width: ${width - 100};
 background-color:#ffb44d;
-height: ${width - 50};
+height: ${width - 35};
 margin-top: 100;
 border-radius: 25;
 `;
@@ -67,7 +67,7 @@ const FlatListImage = styled.Image`
         border-radius:75;
 `;
 const Name = styled.Text`
-    margin-top: 75;
+    margin-top: 55; 
     font-size: 35;
     color:#0c0931;
 `;
@@ -86,7 +86,7 @@ const Studied = styled.Text`
 const PlaceWrapper = styled.View`
         padding-left:15px;
         padding-right: 15px;
-        margin-top: 40;
+        margin-top: 15; 
 `;
 const SubTitles = styled.Text`
     font-size:18;
@@ -99,9 +99,10 @@ const Places = styled.View`
 `;
 const PlaceText = styled.Text`
  background-color: #0c0931;
- padding: 5px;
+ padding: 6px;
  border-radius: 20;
  color:#fff;
+ font-size:12;
 `;
 const ModalContentWrapper = styled.View`
 background-color:#ffb44d;
@@ -417,7 +418,7 @@ export default class FirstPage extends Component {
                         /* pagingEnabled */
                         renderItem={({ item: rowData }) => {
                             return (
-                                <View style={{ marginHorizontal: 15 }}>
+                                <View style={{ marginHorizontal: 15 }} elevation={10}> 
                                     <FlatListBox>
                                         <View style={{ alignItems: 'center' }}>
                                             <Name >Victoria Benny</Name>
@@ -439,7 +440,7 @@ export default class FirstPage extends Component {
                             );
                         }}
                     />
-                    <View style={{ marginTop: 15, alignItems: 'center' }}>
+                    <View style={{ marginTop: 35, alignItems: 'center' }}>
                         <TouchableOpacity onPress={() => {
                             this.setProfileModalVisible(true)
                         }}
