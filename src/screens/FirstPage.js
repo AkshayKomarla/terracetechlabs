@@ -13,7 +13,7 @@ import {
     ScrollView
 } from 'react-native';
 import { Icon } from 'native-base';
-
+import ElevatedView from 'react-native-elevated-view'
 import styled from "styled-components";
 var {
     height,
@@ -53,7 +53,7 @@ const HeaderRight = styled.View`
 `;
 const FlatListBox = styled.View`
 align-self:center;
-width: ${width - 100};
+width: ${width - 85}; 
 background-color:#ffb44d;
 height: ${width - 35};
 margin-top: 100;
@@ -89,6 +89,10 @@ const PlaceWrapper = styled.View`
         margin-top: 15; 
 `;
 const SubTitles = styled.Text`
+    font-size:18;
+    color:#0c0931;
+`;
+const SubTitlesArrow = styled.Text`
     font-size:18;
     color:#0c0931;
 `;
@@ -402,8 +406,8 @@ export default class FirstPage extends Component {
 
                     <HeaderRight>
                         <SubTitles>
-                            Icon
-                            {/* <Icon name="md-navigate" /> */}
+                               
+                            <Icon name="md-exit" />
                         </SubTitles>
                     </HeaderRight>
                 </HeaderWrap>
@@ -418,7 +422,7 @@ export default class FirstPage extends Component {
                         /* pagingEnabled */
                         renderItem={({ item: rowData }) => {
                             return (
-                                <View style={{ marginHorizontal: 15 }} elevation={10}> 
+                                <View style={{ marginHorizontal: 20 }}> 
                                     <FlatListBox>
                                         <View style={{ alignItems: 'center' }}>
                                             <Name >Victoria Benny</Name>
@@ -427,7 +431,7 @@ export default class FirstPage extends Component {
                                         </View>
                                         <PlaceWrapper >
                                             <SubTitles>
-                                                <Icon name="md-navigate" />  Places
+                                                <Icon name="md-compass" />  Places  
                                             </SubTitles>
                                             <Places >
                                                 <PlaceText>Miami,Florida</PlaceText>
@@ -463,10 +467,10 @@ export default class FirstPage extends Component {
 
                     <ModalContentWrapper {...this._panResponder.panHandlers}>
                         <ModalHeader>
-                            <SubTitles>
-                                Icon
-                                {/* <Icon name="md-navigate" /> */}
-                            </SubTitles>
+                            <SubTitlesArrow>
+                                 
+                                <Icon name="md-arrow-up" />
+                            </SubTitlesArrow>
                             <ModalImageWrapper>
                                 <ModalImage source={
                                     require('../assets/images/card-image.jpg')
@@ -488,11 +492,11 @@ export default class FirstPage extends Component {
                         <ModalTextContent>
                             <Name >Victoria Benny</Name>
                             <From >From Boston, Massachusetts</From>
-                            <Studied>Nearby</Studied>
+                            <SubTitles>Nearby</SubTitles>
                         </ModalTextContent>
                         <PlaceWrapper >
                             <SubTitles>
-                                <Icon name="md-navigate" />  Places
+                                <Icon name="md-compass" />  Places
                                        </SubTitles>
                             <Places >
                                 <PlaceText >Miami,Florida</PlaceText>
@@ -500,7 +504,7 @@ export default class FirstPage extends Component {
                             </Places>
                         </PlaceWrapper>
                         <PlaceWrapper >
-                            <SubTitles><Icon name="md-navigate" />  Studies</SubTitles>
+                            <SubTitles><Icon name="md-bookmarks" />  Studies</SubTitles>
                             <Places >
                                 <PlaceText>Miami,Florida</PlaceText>
                             </Places>
